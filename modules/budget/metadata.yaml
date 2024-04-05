@@ -98,6 +98,10 @@ spec:
     description: Specifies the start date (DD-MM-YYYY) for the calendar_period CUSTOM
     type: string
     required: false
+  - name: disable_default_iam_recipients
+    description: When set to true, disables default notifications sent when a threshold is exceeded. Default recipients are those with Billing Account Administrators and Billing Account Users IAM roles for the target account.
+    type: bool
+    required: false
   - name: display_name
     description: 'The display name of the budget. If not set defaults to `Budget For <projects[0]|All Projects>` '
     type: string

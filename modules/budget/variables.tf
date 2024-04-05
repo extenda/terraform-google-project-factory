@@ -95,6 +95,12 @@ variable "monitoring_notification_channels" {
   default     = []
 }
 
+variable "disable_default_iam_recipients" {
+  description = "When set to true, disables default notifications sent when a threshold is exceeded. Default recipients are those with Billing Account Administrators and Billing Account Users IAM roles for the target account."
+  type        = bool
+  default     = false
+}
+
 variable "labels" {
   description = "A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget."
   type        = map(string)
